@@ -6,7 +6,6 @@ import java.security.MessageDigest;
 import javax.crypto.Mac;
 import java.util.Base64;
 
-
 public class Token {
 
     public static String Firmar(String Texto, String Secreto) {
@@ -58,7 +57,7 @@ public class Token {
             }
 
             String FirmaEsperada = Firmar(Partes [0], Secreto);
-            if (!MessageDigest.isEqual(FirmaEsperada.getBytes()StandardCharsets.UTF_8, Partes [1].getBytes(StandardCharsets.UTF_8))) {
+            if (!MessageDigest.isEqual(FirmaEsperada.getBytes(StandardCharsets.UTF_8), Partes [1].getBytes(StandardCharsets.UTF_8))) {
                 return null;
             }
 
