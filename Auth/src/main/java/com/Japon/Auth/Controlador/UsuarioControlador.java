@@ -26,7 +26,7 @@ public class UsuarioControlador {
         Usuario Nuevo = Servicio.Registrar(
             Body.get("Nombre_Completo"),
             Body.get("Correo"),
-            Body.get("Contraseña")
+            Body.get("Pass")
         );
 
         Map <String, Object> Respuesta = new LinkedHashMap <> ();
@@ -40,7 +40,7 @@ public class UsuarioControlador {
 
     @PostMapping("/Login")
     public ResponseEntity <Map <String, Object>> Login(@RequestBody Map <String, String> Body) {
-        String NuevoToken = Servicio.IniciarSesion(Body.get("Correo"), Body.get("Contraseña"));
+        String NuevoToken = Servicio.IniciarSesion(Body.get("Correo"), Body.get("Pass"));
         Usuario U = Servicio.BuscarPorCorreo(Body.get("Correo").trim());
 
         Map <String, Object> Respuesta = new LinkedHashMap <> ();

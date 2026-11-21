@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface UsuarioRepositorio extends JpaRepository <Usuario, Long> {
 
-    @Query("Select U From Usuarios U Where Lower(U.Correo) = Lower(:Correo)")
+    @Query("Select U From Usuario U Where Lower(U.Correo) = Lower(:Correo)")
     Optional <Usuario> BuscarPorCorreo(@Param("Correo") String Correo);
 
 }

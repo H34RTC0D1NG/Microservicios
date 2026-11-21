@@ -25,6 +25,7 @@ public class AdminInicial implements CommandLineRunner {
         Admin.setNombre_Completo(CuentaAdmin.NOMBRE);
         Admin.setCorreo(CuentaAdmin.CORREO.toLowerCase());
         Admin.setContraseña(Encriptador.encode(CuentaAdmin.CONTRASEÑA));
+        Admin.setRol("Admin");
 
         Repositorio.save(Admin);
 
