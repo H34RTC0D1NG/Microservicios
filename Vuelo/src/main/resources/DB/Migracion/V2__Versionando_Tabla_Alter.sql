@@ -1,0 +1,1 @@
+ALTER TABLE vuelo_guardado ADD COLUMN Puerta VARCHAR(10);

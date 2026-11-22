@@ -29,7 +29,7 @@ public class VueloControlador {
 
         D.put("ID", V.getID());
         D.put("Pasaje_ID", V.getPasaje_ID());
-        D.put("Cuidad", V.getCiudad());
+        D.put("Ciudad", V.getCiudad());
         D.put("Kanji", V.getKanji());
         D.put("Codigo", V.getCodigo());
         D.put("Vuelo", V.getVuelo());

@@ -62,7 +62,7 @@ public class Token {
             }
 
             String Datos = new String(Base64.getUrlDecoder().decode(Partes [0]), StandardCharsets.UTF_8);
-            String [] Campos = Datos.split("\\.|");
+            String [] Campos = Datos.split("\\|");
             if (Campos.length != 4) {
                 return null;
             }

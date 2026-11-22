@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface VueloRepositorio extends JpaRepository <VueloGuardado, Long> {
 
-    @Query("Select V From VueloGuadado V Where V.Usuario_ID = :Usuario Order By V.Fecha_Guardado Desc")
+    @Query("Select V From VueloGuardado V Where V.Usuario_ID = :Usuario Order By V.Fecha_Guardado Desc")
     List <VueloGuardado> BuscarPorUsuario(@Param("Usuario") Long Usuario);
 
     @Query("Select V From VueloGuardado V Where V.Usuario_ID = :Usuario And V.Pasaje_ID = :Pasaje")
