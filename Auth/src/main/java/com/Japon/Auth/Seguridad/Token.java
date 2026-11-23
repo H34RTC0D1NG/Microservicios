@@ -31,27 +31,34 @@ public class Token {
 
     public static String [] Validar(String Valor, String Secreto) {
         try {
+            System.out.println("[DEBUG] Token recibido: " + Valor);
+
             if (Valor == null || !Valor.contains(".")) {
+                System.out.println("[DEBUG] Token nulo o sin punto");
                 return null;
             }
 
-            String [] Partes = Valor.split("\\,");
+            String [] Partes = Valor.split("\\.");
             if (Partes.length != 2) {
+                System.out.println("[DEBUG] Partes: " + Partes.length);
                 return null;
             }
 
             String FirmaEsperada = Firmar(Partes [0], Secreto);
             if (!MessageDigest.isEqual(FirmaEsperada.getBytes(StandardCharsets.UTF_8), Partes [1].getBytes(StandardCharsets.UTF_8))) {
+                System.out.println("[DEBUG] Firma no coincide");
                 return null;
             }
 
             String Datos = new String(Base64.getUrlDecoder().decode(Partes [0]), StandardCharsets.UTF_8);
-            String [] Campos = Datos.split("\\.");
+            String [] Campos = Datos.split("\\|");
             if (Campos.length != 4) {
+                System.out.println("[DEBUG] Campos: " + Campos.length);
                 return null;
             }
 
             if (System.currentTimeMillis() > Long.parseLong(Campos [3])) {
+                System.out.println("[DEBUG] Token vencido");
                 return null;
             }
 
@@ -60,12 +67,13 @@ public class Token {
             };
 
         } catch (Exception e) {
+            System.out.println("[DEBUG] Error: " + e.getMessage());
             return null;
         }
     }
 
     public static String DesdeCabecera(String Cabecera) {
-        if (Cabecera == null || !Cabecera.startsWith("Bearer")) {
+        if (Cabecera == null || !Cabecera.startsWith("Bearer ")) {
             return null;
         }
         return Cabecera.substring(7).trim();
