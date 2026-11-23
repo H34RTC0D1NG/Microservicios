@@ -4,9 +4,6 @@
 
 ``` JSON
 
-# Microservicios - Proyecto Japon
-
-```json
 {
     "Microservicios" : [
         {
