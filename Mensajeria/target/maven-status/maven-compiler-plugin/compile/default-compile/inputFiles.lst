@@ -1,5 +1,10 @@
+C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Configuracion\ConfiguracionSwagger.java
 C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Controlador\MensajeriaControlador.java
 C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\MensajeriaApplication.java
 C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Modelo\Mensajeria.java
 C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Repositorio\MensajeriaRepositorio.java
+C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Seguridad\AdminInterceptor.java
+C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Seguridad\ClaveToken.java
+C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Seguridad\Token.java
+C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Seguridad\WebConfig.java
 C:\Microservicios\Fullstack II\Mensajeria\src\main\java\com\Japon\Mensajeria\Servicio\MensajeriaServicio.java

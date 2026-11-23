@@ -1,5 +1,5 @@
-com\Japon\Mensajeria\MensajeriaApplication.class
 com\Japon\Mensajeria\Repositorio\MensajeriaRepositorio.class
 com\Japon\Mensajeria\Servicio\MensajeriaServicio.class
 com\Japon\Mensajeria\Controlador\MensajeriaControlador.class
 com\Japon\Mensajeria\Modelo\Mensajeria.class
+com\Japon\Mensajeria\MensajeriaApplication.class
